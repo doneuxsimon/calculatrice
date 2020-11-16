@@ -3,42 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>calculator</title>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
 
     <section >
-        <table border="1"> 
-         <tr> 
-            <td colspan="3"><input id="output"/></td> 
-            <td><button onclick="effacer()">c</button></td> 
-         </tr> 
-         <tr> 
-            <td><button onclick="afficher('1')">1</button></td> 
-            <td><button onclick="afficher('2')">2</button></td> 
-            <td><button onclick="afficher('3')">3</button></td> 
-            <td><button onclick="afficher('+')">+</button></td> 
-         </tr> 
-         <tr> 
-            <td><button onclick="afficher('4')">4</button></td> 
-            <td><button onclick="afficher('5')">5</button></td> 
-            <td><button onclick="afficher('6')">6</button></td> 
-            <td><button onclick="afficher('-')">-</button></td> 
-         </tr> 
-         <tr> 
-            <td><button onclick="afficher('7')">7</button></td> 
-            <td><button onclick="afficher('8')">8</button></td> 
-            <td><button onclick="afficher('9')">9</button></td> 
-            <td><button onclick="afficher('*')">*</button></td> 
-         </tr> 
-         <tr>
-            <td><button onclick="afficher('.')">.</button></td> 
-            <td><button onclick="afficher('0')">0</button></td> 
-            <td><button onclick="calculer()">=</button></td> 
-            <td><button onclick="afficher('/')">/</button></td> 
-         </tr> 
-      </table> 
+        <div class="calculator-grid">
+            <div id="border-radius" class="output">
+                <div data-previous-operand class="previous-operand"></div>
+                <div data-current-operand class="current-operand"></div>
+            </div>
+            <button data-all-clear class="span-two">AC</button>
+            <button data-delete="">DEL</button>
+            <button data-operation>÷</button>
+            <button data-number>1</button>
+            <button data-number>2</button>
+            <button data-number>3</button>
+            <button data-operation>*</button>
+            <button data-number>4</button>
+            <button data-number>5</button>
+            <button data-number>6</button>
+            <button data-operation>+</button>
+            <button data-number>7</button>
+            <button data-number>8</button>
+            <button data-number>9</button>
+            <button data-operation>-</button>
+            <button data-number id="button-left">.</button>
+            <button data-number>0</button>
+            <button data-equals class="span-two" id="button-right">=</button>
+        </div>
     </section>
-    <script src="./calculatrice.js"></script>
+    <script src="./calculatrice.js" defer></script>
 </body>
 </html>
